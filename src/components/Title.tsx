@@ -1,11 +1,14 @@
-import background from "../images/background.png";
+import background from "../images/background.jpeg";
 import { Button } from "./Button";
 
 export const Title = () => {
   return (
     <div className="block">
       <div className="title">
-        <img src={background} alt="background" className="title_background" />
+        <div className="gradient">
+          <img src={background} alt="background" className="gradient_image" />
+        </div>
+
         <div className="title_container">
           <h1 className="title_h1">Test assignment for front-end developer</h1>
           <p className="title_content">

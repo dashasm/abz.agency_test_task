@@ -1,0 +1,18 @@
+.button {
+  background: $primary-color;
+  border-radius: 80px;
+  width: 100px;
+  height: 34px;
+  border: none;
+
+  color: rgba(0, 0, 0, 0.87);
+
+  &:hover {
+    background: #ffe302;
+  }
+
+  &:disabled {
+    background: #b4b4b4;
+    color: rgba(255, 255, 255, 0.87);
+  }
+}

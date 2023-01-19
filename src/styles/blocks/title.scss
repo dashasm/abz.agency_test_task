@@ -1,0 +1,41 @@
+.title {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  &_container {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    padding: 40px 16px;
+
+    @media (min-width: 768px) {
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    @media (min-width: 2560px) {
+      width: 380px;
+    }
+  }
+
+  &_h1 {
+    padding-bottom: 21px;
+  }
+
+  &_content {
+    padding-bottom: 32px;
+  }
+
+  &_background {
+    @media (max-width: 760px) {
+      min-height: 500px;
+    }
+
+    @media (max-width: 2068px) {
+      width: 100%;
+    }
+  }
+}

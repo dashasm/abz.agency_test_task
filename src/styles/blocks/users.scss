@@ -1,0 +1,22 @@
+.users {
+  text-align: center;
+  padding: 0 16px;
+
+  @media (min-width: 1024px) and (max-width: 2560px) {
+    padding: 0 60px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 0 32px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 20px;
+  padding-bottom: 50px;
+
+  @media (min-width: 2550px) {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
+}

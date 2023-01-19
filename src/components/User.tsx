@@ -8,9 +8,9 @@ export const User: React.FC<Props> = ({ user }) => {
   const { name, position, email, phone, photo } = user;
   return (
     <div className="card">
-      <img src={photo} alt="userIMG" className="card_photo" />
+      <img src={photo} alt="userIMG" className="card_photo" loading="lazy"/>
 
-      <h3 className="card_name">{name}</h3>
+      <h2 className="card_name">{name}</h2>
 
       <div className="card_info">
         <p className="card_position">{position}</p>

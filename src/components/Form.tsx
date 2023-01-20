@@ -32,6 +32,8 @@ export const Form = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [formDataError, setFormDataError] = useState(initialFormDataError);
   const [isUserRegister, setIsUserRegister] = useState(false);
+  const [error, setError] = useState("");
+
   const form = useRef(null);
 
   const { positions } = useSelector((state: RootState) => state);
@@ -45,6 +47,8 @@ export const Form = () => {
       ...formDataError,
       [e.target.name]: "",
     });
+
+    setError('')
 
     let value;
     switch (type) {
@@ -147,7 +151,11 @@ export const Form = () => {
 
             if (form.current) {
               const data = new FormData(form.current);
-              await addUser(data).then((res) => setIsUserRegister(res.success));
+              await addUser(data)
+                .then((res) => {
+                  setIsUserRegister(res.success);
+                  setError(res.error);
+                })
             }
 
             dispatch(setCountOfVisibleUsers(6));
@@ -273,6 +281,7 @@ export const Form = () => {
           </div>
 
           <div className="form_button">
+            <div className="error_text">{error}</div>
             <Button text="Sign up" disabledButton={isDisabledButton} />
           </div>
         </form>

@@ -6,8 +6,8 @@ export async function getUsers(count: number) {
       return await res.json();
     })
     .catch(() => ({
-      Response: "False",
-      Error: "unexpected error",
+      response: "False",
+      error: "unexpected error",
     }));
 }
 
@@ -17,8 +17,8 @@ export async function getToken() {
       return await res.json();
     })
     .catch(() => ({
-      Response: "False",
-      Error: "unexpected error",
+      response: "False",
+      error: "unexpected error",
     }));
 }
 
@@ -35,8 +35,8 @@ export async function addUser(formData: FormData) {
       return await res.json();
     })
     .catch(() => ({
-      Response: "False",
-      Error: "unexpected error",
+      response: "False",
+      error: "unexpected error",
     }));
 }
 
@@ -46,7 +46,7 @@ export async function getPositions() {
       return await res.json();
     })
     .catch(() => ({
-      Response: "False",
-      Error: "unexpected error",
+      response: "False",
+      error: "unexpected error",
     }));
 }

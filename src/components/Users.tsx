@@ -8,7 +8,7 @@ import { User } from "./User";
 export const Users = () => {
   const dispatch = useDispatch();
 
-  const { users, countOfVisibleUsers } = useSelector(
+  const { users, countOfVisibleUsers, totalUsers } = useSelector(
     (state: RootState) => state
   );
 
@@ -22,12 +22,12 @@ export const Users = () => {
         })}
       </div>
 
-      <Button
+      {countOfVisibleUsers < totalUsers && (<Button
         text="Show more"
         downloadUsers={() => {
           dispatch(setCountOfVisibleUsers(countOfVisibleUsers + 6));
         }}
-      />
+      />)}
     </div>
   );
 };
